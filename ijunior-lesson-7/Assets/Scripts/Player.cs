@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
         _playerRb = GetComponent<Rigidbody2D>();
         _playeAnimator = GetComponent<Animator>();
     }
-    void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.D)))
         {

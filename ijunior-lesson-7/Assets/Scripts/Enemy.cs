@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
+
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private Transform _platformDetection;
+    [SerializeField] private Player _player;
+
     private Animator _enemyAnimator;
     private bool _platformEnds = true;
     private float _distance = 2.0f;
-    private Player _player;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _enemyAnimator = GetComponent<Animator>();
         _enemyAnimator.SetBool("isRunnig", true);
-        _player = GameObject.Find("Player").GetComponent<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        Debug.Log(_player);
         RaycastHit2D platformInfo = Physics2D.Raycast(_platformDetection.position, Vector2.down, _distance);
         if (!_player.isGameOver)
         {
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         {
             _enemyAnimator.SetBool("isRunnig", false);
         }
-
+        
         if (!platformInfo.collider)
         {
             if (_platformEnds)
