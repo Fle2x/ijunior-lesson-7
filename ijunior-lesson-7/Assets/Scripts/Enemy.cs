@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Player))]
+[RequireComponent(typeof(Animator))]
 
 public class Enemy : MonoBehaviour
 {
@@ -22,7 +23,6 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_player);
         RaycastHit2D platformInfo = Physics2D.Raycast(_platformDetection.position, Vector2.down, _distance);
         if (!_player.isGameOver)
         {
