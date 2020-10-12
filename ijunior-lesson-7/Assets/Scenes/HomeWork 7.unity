@@ -1265,8 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650bce9057efbd34e8e1bd68c55f1a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _jumpForce: 0
+  _speed: 5
+  _jumpForce: 15
 --- !u!114 &1743698750 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2401837472627066508, guid: bae90a315619b4e46be8d0d347d8f506,
@@ -1842,7 +1842,7 @@ PrefabInstance:
     - target: {fileID: 2401837472627066509, guid: bae90a315619b4e46be8d0d347d8f506,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.47
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2401837472627066509, guid: bae90a315619b4e46be8d0d347d8f506,
         type: 3}
@@ -1893,6 +1893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2401837472627066514, guid: bae90a315619b4e46be8d0d347d8f506,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bae90a315619b4e46be8d0d347d8f506, type: 3}

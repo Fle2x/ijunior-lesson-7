@@ -9,8 +9,6 @@ public class Player : MonoBehaviour
 {
 
     private Animator _playeAnimator;
-    
-    public bool isGameOver = false;
 
     private void Start()
     {
@@ -34,7 +32,6 @@ public class Player : MonoBehaviour
 
         if (enemy)
         {
-            isGameOver = true;
             Destroy(gameObject);
         }
     }

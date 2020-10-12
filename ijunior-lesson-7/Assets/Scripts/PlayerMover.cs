@@ -11,13 +11,12 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
 
-    void Start()
+    private void Start()
     {
         _playerRb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (_playerRb.velocity.y == 0)
         {
